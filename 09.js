@@ -5,6 +5,17 @@
   No comentar la funcion 
 */
 function filtrar(funcion) {
+
+  Array.prototype.filtrar = function(funcion){
+    var arr=[];
+    for ( i = 0 ; i < this.length ; i++){
+      if(funcion(this[i])){
+        arr.push(this[i]);
+      }
+    }
+    return arr;
+  }
+  
   // Escribi una función filtrar en el prototipo de Arrays,
   // que recibe una funcion (callback) que devuelve true o false.
   // filtrar los elementos de ese arreglo en base al resultado de esa funcion

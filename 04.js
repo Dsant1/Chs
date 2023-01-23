@@ -6,15 +6,21 @@
 */
 
 function numeroSimetrico(num) {
-  // La funcion llamada 'numeroSimetrico' recibe como argumento un numero entero 'num'
-  // Esta devuelve true o false dependiendo de si el número es simétrico o no. 
-  // Un número es simétrico cuando es igual a su reverso.
-  // Ej:
-  // numeroSimetrico(11711) devuelve true
+   
+  var a =[];
+  a = Array.from(String(num));
+  var na=[];
+  for (let i = a.length-1;i>=0;i--){
+    na.push(a[i]);
+  }
 
-  // Tu código:
+  if (Number(na.join(""))=== num){
+    return true;
+  }
+  return false;
 
 }
+
 
 // No modifiques nada debajo de esta linea //
 

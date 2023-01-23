@@ -5,6 +5,14 @@
   No comentar la funcion 
 */
 function pluck(array, propiedad) {
+  var  ef=[];
+  for ( let i =0 ;i< array.length;i++){
+      if (array[i].hasOwnProperty(propiedad)){
+        ef.push(array[i][propiedad])
+      }
+  }
+
+  return ef;
   // La función llamada 'pluck' recibe como argumento un array de objetos llamado 'array' y el nombre de una
   // propiedad.
   // La función debe devolver un nuevo arreglo con solo los valores dentro de la propiedad recibida
